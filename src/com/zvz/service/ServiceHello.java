@@ -20,8 +20,12 @@ public class ServiceHello {
 
     public String getValue(String name){
 
-        System.out.println("get==="+name);
-
+        try {
+            Thread.sleep(10*1000);
+            System.out.println("get==="+name);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return "qqqqq:"+name;
     }
 
